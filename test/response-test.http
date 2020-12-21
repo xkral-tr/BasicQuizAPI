@@ -1,0 +1,34 @@
+POST http://localhost:8000/api/v1/questions/ HTTP/1.1
+content-type: application/json
+
+[{
+    "question": "Dummy question",
+    "choices": ["a","b","c","d"],
+    "answer": 3
+}]
+
+###
+
+// GET Questions TEST
+GET http://localhost:8000/api/v1/questions HTTP/1.1
+content-type: application/json
+
+###
+
+// Get Random Question TEST
+GET http://localhost:8000/api/v1/questions/random HTTP/1.1
+content-type: application/json
+
+###
+
+// GET questions that offer the specified number of choices TEST
+GET http://localhost:8000/api/v1/questions/choices/3 HTTP/1.1
+content-type: application/json
+
+###
+
+// GET a specific question with id TEST
+GET http://localhost:8000/api/v1/questions/id/0 HTTP/1.1
+content-type: application/json
+
+####
